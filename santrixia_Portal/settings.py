@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-bsn-b8i@j@ylo92hu53ce5b2399uhwjwf_t8466xvhx75opj6j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "api.santrixia.com",
+    "72.60.222.227"
+]
 
 
 # Application definition
