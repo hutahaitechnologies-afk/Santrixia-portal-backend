@@ -11,6 +11,7 @@ class CountryCardSerializer(serializers.ModelSerializer):
             "slug",
             "flag",
             "image",
+            "full_name",
             "short_description",
         ]
 
