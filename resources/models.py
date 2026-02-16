@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Resource(models.Model):
-    title = models.CharField(max_length=255)
-    category = models.CharField(max_length=100)
+    title = models.TextField()
+    category = models.TextField()
     published_date = models.DateField()
     read_time_minutes = models.PositiveIntegerField(default=5)
     excerpt = models.TextField()
@@ -36,7 +36,7 @@ class ResourceSection(models.Model):
         on_delete=models.CASCADE,
         related_name="sections"
     )
-    heading = models.CharField(max_length=255)
+    heading = models.TextField()
     content = models.TextField()
     order = models.PositiveIntegerField(default=1)
 
@@ -71,7 +71,7 @@ class ApiKey(models.Model):
         on_delete=models.CASCADE,
         related_name="api_keys"
     )
-    name = models.CharField(max_length=100)
+    name = models.TextField()
     key = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
